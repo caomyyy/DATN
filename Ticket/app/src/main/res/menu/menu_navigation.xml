@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:checkableBehavior="single">
+    <item
+        android:id="@+id/navTrangChu"
+        android:title="@string/trangchu"
+        android:icon="@drawable/icon_home"
+        android:checked="true"
+        />
+    <item
+        android:id="@+id/navTimKiem"
+        android:title="@string/timkiem"
+        android:icon="@drawable/icon_search"
+        />
+    <item
+        android:id="@+id/navTaiKhoan"
+        android:title="@string/taikhoan"
+        android:icon="@drawable/icon_user"
+        />
+    <item
+        android:id="@+id/navVe"
+        android:title="@string/ve"
+        android:icon="@drawable/icon_ticket"
+        />
+    <item
+        android:id="@+id/navQuanLyXe"
+        android:title="@string/quanlyxe"
+        android:icon="@drawable/icon_manage"
+        />
+    </group>
+</menu>

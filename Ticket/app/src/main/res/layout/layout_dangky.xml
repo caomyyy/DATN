@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:id="@+id/txtDangky"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/KhungDangKy"
+        android:layout_marginTop="50dp"
+        android:text="@string/dangky"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="180dp" />
+
+    <LinearLayout
+        android:id="@+id/KhungDangKy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDangky"
+        tools:ignore="ExtraText">
+
+        <EditText
+            android:id="@+id/edtHoTen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_user"
+            android:drawablePadding="20dp"
+            android:hint="@string/hoten"
+            android:padding="15dp"
+
+
+            />
+        <EditText
+            android:id="@+id/edtSDT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_phone"
+            android:drawablePadding="20dp"
+            android:hint="@string/sdt"
+            android:inputType="phone"
+            android:padding="15dp" />
+
+
+        <EditText
+            android:id="@+id/edtNgaySinh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_birth"
+            android:drawablePadding="20dp"
+            android:hint="@string/ngaysinh"
+            android:inputType="date"
+            android:padding="15dp" />
+
+        <EditText
+            android:id="@+id/edtCMT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_userid"
+            android:drawablePadding="20dp"
+            android:hint="@string/cmt"
+            android:padding="15dp"
+            android:maxLength="9"
+
+            />
+
+        <RadioGroup
+            android:id="@+id/rgGioiTinh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+            <RadioButton
+                android:id="@+id/rdNam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="@string/nam"
+                android:checked="true"/>
+
+
+            <RadioButton
+                android:id="@+id/rdNu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="@string/nu" />
+
+            <RadioButton
+                android:id="@+id/rdKhac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/khac" />
+
+        </RadioGroup>
+
+
+
+        <EditText
+            android:id="@+id/edtMatKhau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_password"
+            android:drawablePadding="20dp"
+            android:hint="@string/matkhau"
+            android:inputType="numberPassword"
+            android:padding="15dp"
+
+
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+
+            <Button
+                android:id="@+id/btnOKDK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorbtn"
+                android:text="@string/dangky" />
+
+            <Button
+                android:id="@+id/btnDangNhapDK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorbtn"
+                android:text="@string/dangnhap" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
