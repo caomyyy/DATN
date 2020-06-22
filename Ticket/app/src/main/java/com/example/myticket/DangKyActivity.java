@@ -19,12 +19,11 @@ import retrofit2.Response;
 
 
 public class DangKyActivity extends AppCompatActivity implements View.OnFocusChangeListener {
-     EditText edtNgaySinh, edtSDT, edtHoTen, edtCMT,edtMatKhau ;
-     RadioGroup rgGioiTinh;
-     Button btnOKDK,  btnDangNhapDK;
+    EditText edtNgaySinh, edtSDT, edtHoTen, edtCMT, edtMatKhau;
+    RadioGroup rgGioiTinh;
+    Button btnOKDK, btnDangNhapDK;
 
-    String tennd, sdt, cmt,ngaysinh,gioitinh, matkhau;
-
+    String tennd, sdt, cmt, ngaysinh, gioitinh, matkhau;
 
 
     @Override
@@ -32,11 +31,11 @@ public class DangKyActivity extends AppCompatActivity implements View.OnFocusCha
         super.onCreate (savedInstanceState);
         setContentView (R.layout.layout_dangky);
 
-        edtNgaySinh =(EditText) findViewById (R.id.edtNgaySinh);
-        edtCMT =(EditText) findViewById (R.id.edtCMT);
-        edtHoTen =(EditText) findViewById (R.id.edtHoTen);
-        edtSDT =(EditText) findViewById (R.id.edtSDT);
-        edtMatKhau =(EditText) findViewById (R.id.edtMatKhau);
+        edtNgaySinh = (EditText) findViewById (R.id.edtNgaySinh);
+        edtCMT = (EditText) findViewById (R.id.edtCMT);
+        edtHoTen = (EditText) findViewById (R.id.edtHoTen);
+        edtSDT = (EditText) findViewById (R.id.edtSDT);
+        edtMatKhau = (EditText) findViewById (R.id.edtMatKhau);
         rgGioiTinh = (RadioGroup) findViewById (R.id.rgGioiTinh);
         btnOKDK = (Button) findViewById (R.id.btnOKDK);
         btnDangNhapDK = (Button) findViewById (R.id.btnDangNhapDK);
@@ -49,39 +48,43 @@ public class DangKyActivity extends AppCompatActivity implements View.OnFocusCha
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent (DangKyActivity.this , DangNhapActivity.class);
+                Intent intent = new Intent (DangKyActivity.this, DangNhapActivity.class);
                 startActivity (intent);
             }
         });
 
 
-        btnOKDK.setOnClickListener(new View.OnClickListener (){
+        btnOKDK.setOnClickListener (new View.OnClickListener ( ) {
             @Override
             public void onClick(View v) {
-                tennd = edtHoTen.getText ().toString ();
-                sdt = edtSDT.getText ().toString ();
-                cmt = edtCMT.getText ().toString ();
-                ngaysinh = edtNgaySinh.getText ().toString ();
+                tennd = edtHoTen.getText ( ).toString ( );
+                sdt = edtSDT.getText ( ).toString ( );
+                cmt = edtCMT.getText ( ).toString ( );
+                ngaysinh = edtNgaySinh.getText ( ).toString ( );
 
-                switch (rgGioiTinh.getCheckedRadioButtonId()){
+                switch (rgGioiTinh.getCheckedRadioButtonId ( )) {
                     case R.id.rdNam:
-                        gioitinh = "Nam"; break;
+                        gioitinh = "Nam";
+                        break;
                     case R.id.rdNu:
-                        gioitinh ="Nữ"; break;
+                        gioitinh = "Nữ";
+                        break;
                     case R.id.rdKhac:
-                        gioitinh ="Khác"; break;
-                };
-                matkhau = edtMatKhau.getText ().toString ();
-                if (tennd.length () >0 && sdt.length () >0 && cmt.length () >0 && ngaysinh.length () >0 && gioitinh.length () >0 && matkhau.length () >0){
-                    DataClient insertdata = APIUtils.getData ();
-                    Call<String> callback = insertdata.InsertData (tennd, sdt,cmt, ngaysinh, gioitinh, matkhau);
+                        gioitinh = "Khác";
+                        break;
+                }
+                ;
+                matkhau = edtMatKhau.getText ( ).toString ( );
+                if (tennd.length ( ) > 0 && sdt.length ( ) > 0 && cmt.length ( ) > 0 && ngaysinh.length ( ) > 0 && gioitinh.length ( ) > 0 && matkhau.length ( ) > 0) {
+                    DataClient insertdata = APIUtils.getData ( );
+                    Call<String> callback = insertdata.InsertData (tennd, sdt, cmt, ngaysinh, gioitinh, matkhau);
                     callback.enqueue (new Callback<String> ( ) {
                         @Override
                         public void onResponse(Call<String> call, Response<String> response) {
-                            String result = response.body ();
-                            if (result.equals ("Thanh cong")){
+                            String result = response.body ( );
+                            if (result.equals ("success")) {
                                 Toast.makeText (DangKyActivity.this, "Thêm thành công", Toast.LENGTH_SHORT).show ( );
-                                finish ();
+                                finish ( );
                             }
                         }
 
@@ -92,13 +95,10 @@ public class DangKyActivity extends AppCompatActivity implements View.OnFocusCha
                     });
 
 
-
-
-                }else {
+                } else {
                     Toast.makeText (DangKyActivity.this, "Hãy nhâp đủ thông tin", Toast.LENGTH_SHORT).show ( );
 
                 }
-
 
 
             }
@@ -118,17 +118,6 @@ public class DangKyActivity extends AppCompatActivity implements View.OnFocusCha
                 }
         }
         }
-   /* public String getRealPathFromURI (Uri contentUri) {
-        String path = null;
-        String[] proj = { MediaStore.MediaColumns.DATA };
-        Cursor cursor = getContentResolver().query(contentUri, proj, null, null, null);
-        if (cursor.moveToFirst()) {
-            int column_index = cursor.getColumnIndexOrThrow(MediaStore.MediaColumns.DATA);
-            path = cursor.getString(column_index);
-        }
-        cursor.close();
-        return path;
-    }*/
-    }
+}
 
 

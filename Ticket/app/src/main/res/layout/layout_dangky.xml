@@ -55,6 +55,19 @@
             android:padding="15dp" />
 
 
+
+        <EditText
+            android:id="@+id/edtCMT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_userid"
+            android:drawablePadding="20dp"
+            android:hint="@string/cmt"
+            android:inputType="number"
+            android:padding="15dp"
+            android:maxLength="12"
+
+            />
         <EditText
             android:id="@+id/edtNgaySinh"
             android:layout_width="match_parent"
@@ -65,17 +78,7 @@
             android:inputType="date"
             android:padding="15dp" />
 
-        <EditText
-            android:id="@+id/edtCMT"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/icon_userid"
-            android:drawablePadding="20dp"
-            android:hint="@string/cmt"
-            android:padding="15dp"
-            android:maxLength="9"
 
-            />
 
         <RadioGroup
             android:id="@+id/rgGioiTinh"
@@ -132,14 +135,7 @@
             android:orientation="horizontal"
             android:padding="15dp">
 
-            <Button
-                android:id="@+id/btnOKDK"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/colorbtn"
-                android:text="@string/dangky" />
+
 
             <Button
                 android:id="@+id/btnDangNhapDK"
@@ -149,6 +145,14 @@
                 android:layout_weight="1"
                 android:backgroundTint="@color/colorbtn"
                 android:text="@string/dangnhap" />
+            <Button
+                android:id="@+id/btnOKDK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorbtn"
+                android:text="@string/dangky" />
         </LinearLayout>
 
 

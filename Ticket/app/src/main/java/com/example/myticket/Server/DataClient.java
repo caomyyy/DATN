@@ -23,7 +23,7 @@ public interface DataClient {
     @FormUrlEncoded
     @POST("login.php")
     Call<List<Nguoidung>> Logindata(@Field ("sdt" ) String sdt,
-                                    @Field ("matkhau") String matkhau);
+                                    @Field ("matkhaus") String matkhau);
 
 }
 
