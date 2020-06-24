@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myticket">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -10,27 +11,40 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DangNhapActivity">
-
-    </activity>
-
         <activity android:name=".DangKyActivity">
+
+        </activity>
+        <activity android:name=".DangNhapActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
 
-    </activity>
-
-        <activity android:name=".TimKiemActivity">
+        <activity android:name=".TimKiemActivity" >
 
         </activity>
-        <activity android:name=".ChonGheActivity">
+        <activity android:name=".ChonGheActivity" >
 
         </activity>
         <activity android:name=".TrangChuActivity" >
+
         </activity>
+
+        <activity android:name=".TheoDoi">
+
+        </activity>
+        <activity android:name=".ThongTinVeActivity" >
+
+        </activity>
+        <activity android:name=".TaiKhoanActivity" >
+
+        </activity>
+        <activity android:name=".QuanLyXeActivity" >
+
+        </activity>
+
     </application>
 
 </manifest>

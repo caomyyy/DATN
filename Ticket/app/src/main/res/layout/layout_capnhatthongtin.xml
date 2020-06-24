@@ -8,12 +8,12 @@
     >
 
     <TextView
-        android:id="@+id/txtDangky"
+        android:id="@+id/txtThayDoiThongTin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/KhungDangKy"
+        android:layout_above="@+id/KhungThayDoiThongTin"
         android:layout_marginTop="50dp"
-        android:text="@string/dangky"
+        android:text="@string/thaydoithongtin"
         android:textAlignment="center"
         android:textSize="30dp"
         android:textStyle="bold"
@@ -21,7 +21,7 @@
         tools:layout_editor_absoluteX="180dp" />
 
     <LinearLayout
-        android:id="@+id/KhungDangKy"
+        android:id="@+id/KhungThayDoiThongTin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
@@ -31,7 +31,7 @@
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDangky"
+        app:layout_constraintTop_toBottomOf="@+id/txtThayDoiThongTin"
         tools:ignore="ExtraText">
 
         <EditText
@@ -128,7 +128,7 @@
 
 
             />
-        
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -139,21 +139,14 @@
 
 
             <Button
-                android:id="@+id/btnDangNhapDK"
+                android:id="@+id/btnCapNhat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/colorbtn"
-                android:text="@string/dangnhap" />
-            <Button
-                android:id="@+id/btnOKDK"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/colorbtn"
-                android:text="@string/dangky" />
+                android:text="@string/capnhat" />
+
         </LinearLayout>
 
 

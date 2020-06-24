@@ -8,79 +8,80 @@ public class Nguoidung {
 @SerializedName("ID")
 @Expose
 private String iD;
-@SerializedName("tennd")
-@Expose
-private String tennd;
-@SerializedName("sdt")
-@Expose
-private String sdt;
-@SerializedName("cmt")
-@Expose
-private String cmt;
-@SerializedName("ngaysinh")
-@Expose
-private String ngaysinh;
-@SerializedName("gioitinh")
-@Expose
-private String gioitinh;
-@SerializedName("matkhau")
-@Expose
-private String matkhau;
+    @SerializedName("tennd")
+    @Expose
+    private Object tennd;
+    @SerializedName("sdt")
+    @Expose
+    private String sdt;
+    @SerializedName("cmt")
+    @Expose
+    private String cmt;
+    @SerializedName("ngaysinh")
+    @Expose
+    private String ngaysinh;
+    @SerializedName("gioitinh")
+    @Expose
+    private String gioitinh;
+    @SerializedName("matkhau")
+    @Expose
+    private String matkhau;
 
-public String getID() {
-return iD;
-}
+    public String getID() {
+        return iD;
+    }
 
-public void setID(String iD) {
-this.iD = iD;
-}
+    public void setID(String iD) {
+        this.iD = iD;
+    }
 
-public String getTennd() {
-return tennd;
-}
+    public Object getTennd() {
+        return tennd;
+    }
 
-public void setTennd(String tennd) {
-this.tennd = tennd;
-}
+    public void setTennd(Object tennd) {
+        this.tennd = tennd;
+    }
 
-public String getSdt() {
-return sdt;
-}
+    public String getSdt() {
+        return sdt;
+    }
 
-public void setSdt(String sdt) {
-this.sdt = sdt;
-}
+    public void setSdt(String sdt) {
+        this.sdt = sdt;
+    }
 
-public String getCmt() {
-return cmt;
-}
+    public String getCmt() {
+        return cmt;
+    }
 
-public void setCmt(String cmt) {
-this.cmt = cmt;
-}
+    public void setCmt(String cmt) {
+        this.cmt = cmt;
+    }
 
-public String getNgaysinh() {
-return ngaysinh;
-}
+    public String getNgaysinh() {
+        return ngaysinh;
+    }
 
-public void setNgaysinh(String ngaysinh) {
-this.ngaysinh = ngaysinh;
-}
+    public void setNgaysinh(String ngaysinh) {
+        this.ngaysinh = ngaysinh;
+    }
 
-public String getGioitinh() {
-return gioitinh;
-}
+    public String getGioitinh() {
+        return gioitinh;
+    }
 
-public void setGioitinh(String gioitinh) {
-this.gioitinh = gioitinh;
-}
+    public void setGioitinh(String gioitinh) {
+        this.gioitinh = gioitinh;
+    }
 
-public String getMatkhau() {
-return matkhau;
-}
+    public String getMatkhau() {
+        return matkhau;
+    }
 
-public void setMatkhau(String matkhau) {
-this.matkhau = matkhau;
-}
+    public void setMatkhau(String matkhau) {
+        this.matkhau = matkhau;
+    }
+
 
 }

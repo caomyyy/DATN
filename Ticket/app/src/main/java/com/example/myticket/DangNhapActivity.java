@@ -40,7 +40,7 @@ public class DangNhapActivity extends AppCompatActivity {
        btnDangKyDN.setOnClickListener (new View.OnClickListener ( ) {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent (DangNhapActivity.this, DangKyActivity.class);
+                Intent intent = new Intent (DangNhapActivity.this, TrangChuActivity.class);
                 startActivity (intent);
             }
         });
@@ -57,11 +57,10 @@ public class DangNhapActivity extends AppCompatActivity {
                        @Override
                        public void onResponse(Call<List<Nguoidung>> call, Response<List<Nguoidung>> response) {
                            ArrayList<Nguoidung> mangnguoidung  = (ArrayList<Nguoidung>) response.body ();
-                           if (mangnguoidung.size () >0) {
+                           if (mangnguoidung.size ( ) > 0) {
                                Log.d ("BBB" , mangnguoidung.get (0).getSdt ());
                                Log.d ("BBB" , mangnguoidung.get (0).getMatkhau ());
-                               Intent intent = new Intent (DangNhapActivity.this, TrangChuActivity.class);
-                               startActivity (intent);
+
                            }
                        }
 

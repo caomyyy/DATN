@@ -39,7 +39,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/icon_user"
             android:drawablePadding="20dp"
-            android:text="mmmmmmmmm"
+            android:text="Cao Thị My"
             android:padding="15dp"
 
 
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/icon_birth"
             android:drawablePadding="20dp"
-            android:text="mmmmmmmm"
+            android:text="15/03/1997"
             android:padding="15dp" />
 
         <TextView
@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/icon_userid"
             android:drawablePadding="20dp"
-            android:text="ccccccccc"
+            android:text="163445205"
             android:padding="15dp"
             android:maxLength="9"
 
@@ -75,20 +75,10 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/icon_phone"
             android:drawablePadding="20dp"
-            android:text="mmmmmmmmm"
+            android:text="0972582560"
             android:padding="15dp" />
 
-        <TextView
-            android:id="@+id/txtMatKhauTK"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/icon_password"
-            android:drawablePadding="20dp"
-           android:text="mmmmmmmmm"
-            android:padding="15dp"
 
-
-            />
 
 
         <Button
