@@ -16,7 +16,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="100dp"
         android:layout_marginBottom="25dp"
-        android:text="@string/app_name"
+        android:text="@string/datvexe"
         android:textColor="@color/colorWhite"
         android:textSize="40dp" />
 </RelativeLayout>

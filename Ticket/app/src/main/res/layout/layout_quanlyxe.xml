@@ -1,105 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-    <TextView
-        android:id="@+id/txtQuanLyXe"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="@string/quanlyxe"
-        android:textAlignment="center"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="180dp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="30dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtQuanLyXe"
+        android:layout_height="match_parent"
         tools:ignore="ExtraText">
 
         <TextView
-            android:id="@+id/txtTen"
+            android:id="@+id/txtQuanLyXe"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/icon_user"
-            android:drawablePadding="20dp"
-            android:text="mmmmmmmmm"
-            android:padding="15dp"
+            android:layout_height="41dp"
+            android:layout_above="@+id/KhungVe"
+            android:layout_marginTop="50dp"
+            android:text="@string/quanlyxe"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="180dp" />
 
-
-            />
-
-
-        <TextView
-            android:id="@+id/txtNgayS"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/icon_birth"
-            android:drawablePadding="20dp"
-            android:text="mmmmmmmm"
-            android:inputType="date"
-            android:padding="15dp" />
-
-        <TextView
-            android:id="@+id/txtCMTTK"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/icon_userid"
-            android:drawablePadding="20dp"
-            android:text="ccccccccc"
-            android:padding="15dp"
-            android:maxLength="9"
-
-            />
+        <LinearLayout
+            android:id="@+id/KhungVe"
+            android:layout_width="352dp"
+            android:layout_height="570dp"
+            android:layout_margin="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtQuanLyXe"
+            tools:ignore="ExtraText">
 
 
 
-        <TextView
-            android:id="@+id/txtSDTTK"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/icon_phone"
-            android:drawablePadding="20dp"
-            android:text="mmmmmmmmm"
-            android:padding="15dp" />
-
-        <TextView
-            android:id="@+id/txtMatKhauTK"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/icon_password"
-            android:drawablePadding="20dp"
-            android:text="mmmmmmmmm"
-            android:padding="15dp"
 
 
-            />
+        </LinearLayout>
 
-
-        <Button
-            android:id="@+id/btnThayDoiTK"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:backgroundTint="@color/colorbtn"
-            android:text="@string/thaydoi"
-            android:layout_gravity="center"/>
-
-
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

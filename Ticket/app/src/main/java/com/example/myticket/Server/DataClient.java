@@ -7,7 +7,6 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
-import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface DataClient {
@@ -23,8 +22,8 @@ public interface DataClient {
 
     @FormUrlEncoded
     @POST("login.php")
-    Call<String> Logindata(@Field ("user") String user,
-                           @Field ("password") String password);
+    Call<List<Nguoidung>> Logindata(@Field ("sdt" ) String sdt,
+                                    @Field ("matkhaus") String matkhau);
 
 }
 

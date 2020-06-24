@@ -18,7 +18,7 @@
 		$query = "INSERT INTO nguoidung VALUES(null, '$TenND' , '$SDT', '$CMT', '$NgaySinh', '$GioiTinh', '$MatKhau')";
 		$data = myqli_query($con,$query);
 		if ($data) {
-			echo "Thanh cong";
+			echo "success";
 		}else {
 			echo "that bai";
 		}

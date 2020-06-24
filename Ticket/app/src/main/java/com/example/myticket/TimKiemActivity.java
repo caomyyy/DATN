@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TimKiemActivity extends AppCompatActivity {
-    private Spinner spnCategory, spnCategory2;
+    private  Spinner spnCategory, spnCategory2;
     Button btnOK, btnThoat;
 
 
@@ -24,32 +24,27 @@ public class TimKiemActivity extends AppCompatActivity {
 
         super.onCreate (savedInstanceState);
         setContentView (R.layout.layout_timkiem);
+
         spnCategory = (Spinner) findViewById (R.id.spnCategory);
         spnCategory2 = (Spinner)findViewById (R.id.spnCategory2) ;
         btnOK = (Button) findViewById (R.id.btnOK);
         btnThoat = (Button) findViewById (R.id.btnThoat);
 
-        btnOK.setOnClickListener (new View.OnClickListener ( ) {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (TimKiemActivity.this , ChonGheActivity.class);
-                startActivity (intent);
-            }
-        });
-        List<String> list = new ArrayList<> ();
-        list.add("Điểm 1");
-        list.add("Điểm 2");
-        list.add("Điểm 3");
-        list.add("Điểm 4");
-        list.add("Điểm 5");
-        List<String> list2 = new ArrayList<> ();//
-        list2.add("Điểm 1");
-        list2.add("Điểm 2");
-        list2.add("Điểm 3");
-        list2.add("Điểm 4");
-        list2.add("Điểm 5");
-        ArrayAdapter<String> adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item,list);
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<> (this , android.R.layout.simple_spinner_item,list2);//
+
+        List<String> diemdon = new ArrayList<> ();
+        diemdon.add("Điểm 1");
+        diemdon.add("Điểm 2");
+        diemdon.add("Điểm 3");
+        diemdon.add("Điểm 4");
+        diemdon.add("Điểm 5");
+        List<String> diemdung = new ArrayList<> ();
+        diemdung.add("Điểm 1");
+        diemdung.add("Điểm 2");
+        diemdung.add("Điểm 3");
+        diemdung.add("Điểm 4");
+        diemdung.add("Điểm 5");
+        ArrayAdapter<String> adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item,diemdon);
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<> (this , android.R.layout.simple_spinner_item,diemdung);//
         adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
         adapter2.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
         spnCategory.setAdapter(adapter);
@@ -60,9 +55,6 @@ public class TimKiemActivity extends AppCompatActivity {
                 Toast.makeText(TimKiemActivity.this, spnCategory.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
 
             }
-
-
-
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
@@ -85,6 +77,9 @@ public class TimKiemActivity extends AppCompatActivity {
             }
         });
 
+
+
     }
+
 
 }
