@@ -34,12 +34,11 @@
         tools:ignore="ExtraText">
 
         <TextView
-            android:id="@+id/txtTen"
+            android:id="@+id/txtTenND"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/icon_user"
             android:drawablePadding="20dp"
-            android:text="Cao Thị My"
             android:padding="15dp"
 
 
@@ -52,16 +51,14 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/icon_birth"
             android:drawablePadding="20dp"
-            android:text="15/03/1997"
             android:padding="15dp" />
 
         <TextView
-            android:id="@+id/txtCMTTK"
+            android:id="@+id/txtCMT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/icon_userid"
             android:drawablePadding="20dp"
-            android:text="163445205"
             android:padding="15dp"
             android:maxLength="9"
 
@@ -70,19 +67,26 @@
 
 
         <TextView
-            android:id="@+id/txtSDTTK"
+            android:id="@+id/txtSDT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/icon_phone"
             android:drawablePadding="20dp"
-            android:text="0972582560"
+            android:padding="15dp" />
+        <TextView
+            android:id="@+id/txtMatKhau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_password"
+            android:drawablePadding="20dp"
+            android:text=""
             android:padding="15dp" />
 
 
 
 
         <Button
-            android:id="@+id/btnThayDoiTK"
+            android:id="@+id/btnThayDoiTT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"

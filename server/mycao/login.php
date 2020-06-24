@@ -2,7 +2,7 @@
 	require "connect.php";
 	$SDT = isset($_POST[ 'SDT' ]);
 	$MatKhau = isset($_POST['MatKhau']);
-	//$SDT = "0972582560";
+//	$SDT = "0972582560";
 //$MatKhau = "123";
 	Class Nguoidung {
 		function Nguoidung ( $id,$user, $phone ,$cmt, $ngaysinh, 

@@ -31,10 +31,7 @@ public class DangNhapActivity extends AppCompatActivity {
         setContentView (R.layout.layout_dangnhap);
 
 
-        btnDangKyDN = (Button) findViewById (R.id.btnDangKyDN);
-        btnDangNhapDN = (Button) findViewById (R.id.btnDangNhapDN);
-        edtMatKhauDN = (EditText) findViewById (R.id.edtMatKhauDN) ;
-        edtSDTDN = (EditText) findViewById (R.id.edtSDTDN) ;
+        anhxa();
 
 
        btnDangKyDN.setOnClickListener (new View.OnClickListener ( ) {
@@ -58,8 +55,9 @@ public class DangNhapActivity extends AppCompatActivity {
                        public void onResponse(Call<List<Nguoidung>> call, Response<List<Nguoidung>> response) {
                            ArrayList<Nguoidung> mangnguoidung  = (ArrayList<Nguoidung>) response.body ();
                            if (mangnguoidung.size ( ) > 0) {
-                               Log.d ("BBB" , mangnguoidung.get (0).getSdt ());
-                               Log.d ("BBB" , mangnguoidung.get (0).getMatkhau ());
+                               Intent intent = new Intent (DangNhapActivity.this, TaiKhoanActivity.class);
+                               intent.putExtra ("mangnguoidung", mangnguoidung);
+                                startActivity (intent);
 
                            }
                        }
@@ -76,5 +74,12 @@ public class DangNhapActivity extends AppCompatActivity {
 
            }
        });
+    }
+
+    private void anhxa() {
+        btnDangKyDN = (Button) findViewById (R.id.btnDangKyDN);
+        btnDangNhapDN = (Button) findViewById (R.id.btnDangNhapDN);
+        edtMatKhauDN = (EditText) findViewById (R.id.edtMatKhauDN) ;
+        edtSDTDN = (EditText) findViewById (R.id.edtSDTDN) ;
     }
 }
