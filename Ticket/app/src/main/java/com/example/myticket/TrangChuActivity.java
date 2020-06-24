@@ -15,15 +15,11 @@ public class TrangChuActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.layout_trangchu);
-        Intent intent = getIntent ();
-        ArrayList<Nguoidung> nguoidungArrayList = intent.getParcelableArrayListExtra ("mangnguoidung");
-        init();
+
+
 
 
     }
 
-    private void init() {
 
-
-    }
 }

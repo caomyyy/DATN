@@ -19,12 +19,11 @@ public class TaiKhoanActivity extends AppCompatActivity {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.layout_taikhoan);
         anhxa();
-        init();
 
 
     }
 
-    private void init() {
+   private void init() {
         Intent intent = getIntent ();
         ArrayList<Nguoidung> nguoidungArrayList = intent.getParcelableArrayListExtra ("mangnguoidung");
         txtNgaySinh.setText(nguoidungArrayList.get (0).getNgaysinh ());
