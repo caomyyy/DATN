@@ -42,7 +42,7 @@
             android:drawableLeft="@drawable/icon_phone"
             android:drawablePadding="20dp"
             android:hint="@string/sdt"
-            android:inputType="phone"
+            android:inputType="text"
             android:padding="15dp" />
 
         <EditText
@@ -52,7 +52,7 @@
             android:drawableLeft="@drawable/icon_password"
             android:drawablePadding="20dp"
             android:hint="@string/matkhau"
-            android:inputType="numberPassword"
+            android:inputType="text"
             android:padding="15dp"
 
 

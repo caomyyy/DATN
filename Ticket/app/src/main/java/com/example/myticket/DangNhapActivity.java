@@ -20,7 +20,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class DangNhapActivity extends AppCompatActivity {
+public class DangNhapActivity extends AppCompatActivity{
     EditText edtSDTDN, edtMatKhauDN;
     Button btnDangKyDN, btnDangNhapDN;
     String sdt, matkhau;
@@ -52,25 +52,42 @@ public class DangNhapActivity extends AppCompatActivity {
                matkhau = edtMatKhauDN.getText ().toString ();
                if (sdt.length () >0 && matkhau.length () >0){
                    DataClient dataClient = APIUtils.getData ();
-                   Call<List<Nguoidung>> callback = dataClient.Logindata (sdt, matkhau);
-                   callback.enqueue (new Callback<List<Nguoidung>> ( ) {
+                   Call<String> callback = dataClient.Logindata(sdt, matkhau);
+                   callback.enqueue(new Callback<String>() {
                        @Override
-                       public void onResponse(Call<List<Nguoidung>> call, Response<List<Nguoidung>> response) {
-                           ArrayList<Nguoidung> mangnguoidung  = (ArrayList<Nguoidung>) response.body ();
-                           if (mangnguoidung.size () >0) {
-                               Log.d ("BBB" , mangnguoidung.get (0).getSdt ());
-                               Log.d ("BBB" , mangnguoidung.get (0).getMatkhau ());
+                       public void onResponse(Call<String> call, Response<String> response) {
+                           if (response.equals("success")){
                                Intent intent = new Intent (DangNhapActivity.this, TrangChuActivity.class);
                                startActivity (intent);
+                           } else {
+                               Toast.makeText (DangNhapActivity.this, "Không có tài khoản này", Toast.LENGTH_SHORT).show ( );
                            }
                        }
 
                        @Override
-                       public void onFailure(Call<List<Nguoidung>> call, Throwable t) {
-                           Toast.makeText (DangNhapActivity.this, "Không có tài khoản này", Toast.LENGTH_SHORT).show ( );
-
+                       public void onFailure(Call<String> call, Throwable t) {
+                           Toast.makeText (DangNhapActivity.this, "Call error", Toast.LENGTH_SHORT).show ( );
                        }
                    });
+//                   Call<List<Nguoidung>> callback = dataClient.Logindata (sdt, matkhau);
+//                   callback.enqueue (new Callback<List<Nguoidung>> ( ) {
+//                       @Override
+//                       public void onResponse(Call<List<Nguoidung>> call, Response<List<Nguoidung>> response) {
+//                           ArrayList<Nguoidung> mangnguoidung  = (ArrayList<Nguoidung>) response.body ();
+//                           if (mangnguoidung.size () >0) {
+//                               Log.d ("BBB" , mangnguoidung.get (0).getSdt ());
+//                               Log.d ("BBB" , mangnguoidung.get (0).getMatkhau ());
+//                               Intent intent = new Intent (DangNhapActivity.this, TrangChuActivity.class);
+//                               startActivity (intent);
+//                           }
+//                       }
+//
+//                       @Override
+//                       public void onFailure(Call<List<Nguoidung>> call, Throwable t) {
+//                           Toast.makeText (DangNhapActivity.this, "Không có tài khoản này", Toast.LENGTH_SHORT).show ( );
+//
+//                       }
+//                   });
                } else {
                    Toast.makeText (DangNhapActivity.this, "Điền đầy đủ thông tin", Toast.LENGTH_SHORT).show ( );
                }
