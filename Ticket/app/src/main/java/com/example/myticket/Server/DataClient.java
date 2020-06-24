@@ -20,10 +20,15 @@ public interface DataClient {
                             ,@Field ("gioitinh") String gioitinh
                             ,@Field ("matkhau") String matkhau);
 
+//    @FormUrlEncoded
+//    @POST("login.php")
+//    Call<List<Nguoidung>> Logindata(@Field ("sdt" ) String sdt,
+//                                    @Field ("matkhaus") String matkhau);
+
     @FormUrlEncoded
     @POST("login.php")
-    Call<List<Nguoidung>> Logindata(@Field ("sdt" ) String sdt,
-                                    @Field ("matkhaus") String matkhau);
+    Call<String> Logindata(@Field ("user" ) String user,
+                                    @Field ("password") String password);
 
 }
 
