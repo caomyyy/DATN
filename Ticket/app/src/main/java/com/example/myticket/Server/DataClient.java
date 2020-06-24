@@ -13,17 +13,17 @@ public interface DataClient {
 
     @FormUrlEncoded
     @POST("insert.php")
-    Call<String> InsertData(@Field ("tennd") String tennd
-                            ,@Field ("sdt") String sdt
-                            ,@Field ("ngaysinh") String ngaysinh
-                            ,@Field ("cmt") String cmt
-                            ,@Field ("gioitinh") String gioitinh
-                            ,@Field ("matkhau") String matkhau);
+    Call<String> InsertData(@Field ("TenND") String tennd
+                            ,@Field ("SDT") String sdt
+                            ,@Field ("NgaySinh") String ngaysinh
+                            ,@Field ("CMT") String cmt
+                            ,@Field ("GioiTinh") String gioitinh
+                            ,@Field ("MatKhau") String matkhau);
 
     @FormUrlEncoded
     @POST("login.php")
-    Call<List<Nguoidung>> Logindata(@Field ("sdt" ) String sdt,
-                                    @Field ("matkhaus") String matkhau);
+    Call<List<Nguoidung>> Logindata(@Field ("SDT" ) String sdt,
+                                    @Field ("MatKhau") String matkhau);
 
 }
 
