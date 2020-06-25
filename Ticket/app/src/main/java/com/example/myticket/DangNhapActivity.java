@@ -1,5 +1,6 @@
 package com.example.myticket;
 
+import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,6 +17,7 @@ import com.example.myticket.Server.DataClient;
 import java.util.ArrayList;
 import java.util.List;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -48,43 +50,26 @@ public class DangNhapActivity extends AppCompatActivity {
                sdt = edtSDTDN.getText ().toString ();
                matkhau = edtMatKhauDN.getText ().toString ();
                if (sdt.length () >0 && matkhau.length () >0){
-                   DataClient dataClient = APIUtils.getData ();
-                   Call<String> callback = dataClient.Logindata (sdt, matkhau);
-                   callback.enqueue (new Callback<String> ( ) {
-                       @Override
-                       public void onResponse(Call<String> call, Response<String> response) {
-                           if (response.equals("success")){
-                               Intent intent = new Intent (DangNhapActivity.this, TaiKhoanActivity.class);
-                               startActivity (intent);
-                           } else {
-                               Toast.makeText (DangNhapActivity.this, "Không có tài khoản này", Toast.LENGTH_SHORT).show ();
-                           }
-                       }
+                    DataClient dataClient =APIUtils.getData ();
+                    Call<List<Nguoidung>>  callback = dataClient.Logindata (sdt, matkhau);
+                    callback.enqueue (new Callback<List<Nguoidung>> ( ) {
+                        @Override
+                        public void onResponse(Call<List<Nguoidung>> call, Response<List<Nguoidung>> response) {
+                            ArrayList<Nguoidung> mangnguoidung = (ArrayList<Nguoidung>) response.body ();
+                            if (mangnguoidung.size () >0){
+                                Intent intent = new Intent (DangNhapActivity.this, TrangChuActivity.class);
+                                intent.putExtra ("mangnguoidung", mangnguoidung);
+                                startActivity (intent);
+                                Toast.makeText (DangNhapActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show ( );
+                            }
+                        }
 
-                       @Override
-                       public void onFailure(Call<String> call, Throwable t) {
-                           Toast.makeText (DangNhapActivity.this, "Call error", Toast.LENGTH_SHORT).show ( );
-                       }
-                   });
-//                   Call<List<Nguoidung>> callback = dataClient.Logindata (sdt, matkhau);
-//                   callback.enqueue (new Callback<List<Nguoidung>> ( ) {
-//                       @Override
-//                       public void onResponse(Call<List<Nguoidung>> call, Response<List<Nguoidung>> response) {
-//                           ArrayList<Nguoidung> mangnguoidung  = (ArrayList<Nguoidung>) response.body ();
-//                           if (mangnguoidung.size ( ) > 0) {
-//                               Intent intent = new Intent (DangNhapActivity.this, TaiKhoanActivity.class);
-//                               intent.putExtra ("mangnguoidung", mangnguoidung);
-//                               startActivity (intent);
-//
-//                           }
-//                       }
-//
-//                       @Override
-//                       public void onFailure(Call<List<Nguoidung>> call, Throwable t) {
-//                           Toast.makeText (DangNhapActivity.this, "Không có tài khoản này", Toast.LENGTH_SHORT).show ( );
-//
-//                       }
-//                   });
+                        @Override
+                        public void onFailure(Call<List<Nguoidung>> call, Throwable t) {
+
+                        }
+                    });
+
                } else {
                    Toast.makeText (DangNhapActivity.this, "Điền đầy đủ thông tin", Toast.LENGTH_SHORT).show ( );
                }

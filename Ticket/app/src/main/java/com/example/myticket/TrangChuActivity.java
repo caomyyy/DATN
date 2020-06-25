@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 public class TrangChuActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
@@ -18,8 +19,10 @@ public class TrangChuActivity extends AppCompatActivity {
 
 
 
-
     }
 
+    private void init() {
 
+
+    }
 }

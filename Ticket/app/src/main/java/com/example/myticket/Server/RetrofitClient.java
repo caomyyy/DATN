@@ -18,7 +18,7 @@ public class RetrofitClient {
                                     .connectTimeout (10000, TimeUnit.MILLISECONDS)
                                     .retryOnConnectionFailure (true)
                                     .build ();
-     Gson gson = new GsonBuilder ().setLenient ().create ();
+    Gson gson = new GsonBuilder ().setLenient ().create ();
      retrofit = new Retrofit.Builder ()
                     .baseUrl (baseurl)
                     .client (builder)

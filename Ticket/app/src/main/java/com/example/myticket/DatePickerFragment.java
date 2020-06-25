@@ -21,7 +21,7 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         Calendar calendar = Calendar.getInstance ();
         int iNam = calendar.get (Calendar.YEAR);
-        int iThang = calendar.get (Calendar.MONTH);
+        int iThang = calendar.get (Calendar.MONTH) + 1;
         int iNgay = calendar.get (Calendar.DAY_OF_MONTH);
 
         return new DatePickerDialog (getActivity (),this, iNgay, iThang,iNam);

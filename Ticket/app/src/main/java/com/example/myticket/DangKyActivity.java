@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.myticket.Server.APIUtils;
 import com.example.myticket.Server.DataClient;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -67,33 +68,34 @@ public class DangKyActivity extends AppCompatActivity implements View.OnFocusCha
                         gioitinh = "Khác";
                         break;
                 }
-                ;
+
                 matkhau = edtMatKhau.getText ( ).toString ( );
-                if (tennd.length ( ) > 0 && sdt.length ( ) > 0 && cmt.length ( ) > 0 && ngaysinh.length ( ) > 0 && gioitinh.length ( ) > 0 && matkhau.length ( ) > 0) {
+                if (tennd.length () >0 && sdt.length () >0 && cmt.length () >0 && ngaysinh.length () >0
+                        && gioitinh.length () >0 && matkhau.length () >0){
                     DataClient dataClient = APIUtils.getData ();
-                    retrofit2.Call<String> callback = dataClient.InsertData (tennd, sdt, ngaysinh,gioitinh,matkhau,cmt);
+                    Call<String> callback = dataClient.InsertData (tennd, sdt, cmt, ngaysinh, gioitinh, matkhau);
                     callback.enqueue (new Callback<String> ( ) {
                         @Override
                         public void onResponse(Call<String> call, Response<String> response) {
                             String result = response.body ();
-                            if (result != null) {
-                                Toast.makeText (DangKyActivity.this, "", Toast.LENGTH_SHORT).show ( );
+                            if(result.equals ("success")){
+                                Toast.makeText (DangKyActivity.this, "Thêm thành công", Toast.LENGTH_SHORT).show ( );
                             }
-                           
                         }
 
                         @Override
                         public void onFailure(Call<String> call, Throwable t) {
+                            Toast.makeText (DangKyActivity.this, "Thất bại", Toast.LENGTH_SHORT).show ( );
 
                         }
                     });
 
-
-
-                } else {
-                    Toast.makeText (DangKyActivity.this, "Hãy nhâp đủ thông tin", Toast.LENGTH_SHORT).show ( );
-
+                }else {
+                    Toast.makeText (DangKyActivity.this, "Điền đầy đủ thông tin", Toast.LENGTH_SHORT).show ( );
                 }
+
+
+
 
 
             }
@@ -123,7 +125,7 @@ public class DangKyActivity extends AppCompatActivity implements View.OnFocusCha
                     datePickerFragment.show(getSupportFragmentManager (),"Ngày Sinh");
                 }
         }
-        }
+    }
 }
 
 

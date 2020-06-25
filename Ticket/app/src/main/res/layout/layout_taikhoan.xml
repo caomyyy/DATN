@@ -52,6 +52,13 @@
             android:drawableLeft="@drawable/icon_birth"
             android:drawablePadding="20dp"
             android:padding="15dp" />
+        <TextView
+            android:id="@+id/txtGioiTinh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_gender"
+            android:drawablePadding="20dp"
+            android:padding="15dp" />
 
         <TextView
             android:id="@+id/txtCMT"
@@ -65,11 +72,10 @@
             />
 
 
-
         <TextView
             android:id="@+id/txtSDT"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="370dp"
+            android:layout_height="47dp"
             android:drawableLeft="@drawable/icon_phone"
             android:drawablePadding="20dp"
             android:padding="15dp" />
@@ -79,12 +85,23 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/icon_password"
             android:drawablePadding="20dp"
-            android:text=""
+
             android:padding="15dp" />
 
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-
+        <Button
+            android:id="@+id/btnTrangChu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/colorbtn"
+            android:text="@string/trangchu"
+            android:layout_gravity="center"/>
         <Button
             android:id="@+id/btnThayDoiTT"
             android:layout_width="wrap_content"
@@ -93,6 +110,7 @@
             android:backgroundTint="@color/colorbtn"
             android:text="@string/thaydoi"
             android:layout_gravity="center"/>
+    </LinearLayout>
 
 
     </LinearLayout>

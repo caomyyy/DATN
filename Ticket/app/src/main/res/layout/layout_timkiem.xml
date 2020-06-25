@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:ignore="ExtraText">
 
         <TextView
@@ -17,7 +16,7 @@
             android:layout_marginTop="15dp"
             android:text="@string/timkiem"
             android:textAlignment="center"
-            android:textSize="30dp"
+            android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="180dp" />
@@ -46,23 +45,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:padding="@dimen/size15dp"
                     android:checked="true"
-                    android:text="@string/chieudi"/>
+                    android:padding="@dimen/size15dp"
+                    android:text="@string/chieudi" />
+
                 <RadioButton
                     android:id="@+id/rbve"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/size15dp"
                     android:layout_weight="1"
-                    android:text="@string/chieuve"/>
+                    android:padding="@dimen/size15dp"
+                    android:text="@string/chieuve" />
             </RadioGroup>
 
-            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:context="com.cheng.bai14spinner.MainActivity">
+                android:layout_marginTop="@dimen/size20dp"
+               >
 
                 <Spinner
 
@@ -72,11 +72,10 @@
 
 
             </FrameLayout>
-            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:tools="http://schemas.android.com/tools"
+
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:context="com.cheng.bai14spinner.MainActivity">
+                android:layout_height="match_parent">
 
                 <Spinner
 
@@ -87,35 +86,45 @@
 
             </FrameLayout>
 
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawablePadding="15dp"
-                android:text="@string/chonngay"
-                android:autoSizeMaxTextSize="@dimen/size15dp"
-                android:textSize="@dimen/size15dp"
-                android:textStyle="bold"
-                android:padding="@dimen/size15dp"/>
+                android:layout_marginTop="@dimen/size20dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edtGio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_date"
+                    android:drawablePadding="15dp"
+                    android:hint="@string/chonngay"
+                    android:padding="@dimen/size15dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edtNgay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_time"
+                    android:drawablePadding="15dp"
+                    android:hint="@string/chongio"
+                    android:padding="@dimen/size15dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
 
         </LinearLayout>
 
 
-        <CalendarView
-            android:id="@+id/calendarView"
-            android:layout_width="@dimen/size350dp"
-            android:layout_height="@dimen/size350dp"
-            android:layout_marginStart="@dimen/size30dp"
-            android:layout_margin="@dimen/size15dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/KhungTimKiem" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="@dimen/size15dp"
-            app:layout_constraintTop_toBottomOf="@+id/calendarView"
+            app:layout_constraintTop_toBottomOf="@+id/KhungTimKiem"
             tools:layout_editor_absoluteX="69dp">
 
             <Button
@@ -128,7 +137,7 @@
                 android:text="@string/ok" />
 
             <Button
-                android:id="@+id/btnthoat"
+                android:id="@+id/btnThoat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/size15dp"
@@ -139,4 +148,3 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
