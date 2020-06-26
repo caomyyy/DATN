@@ -28,7 +28,7 @@ public class DangNhapActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
-        setContentView (R.layout.layout_thongtinve);
+        setContentView (R.layout.layout_dangnhap);
 
 
         anhxa();
