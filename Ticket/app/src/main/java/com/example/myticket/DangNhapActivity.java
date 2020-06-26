@@ -1,6 +1,5 @@
 package com.example.myticket;
 
-import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,13 +10,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myticket.Server.APIUtils;
-import com.example.myticket.Server.DataClient;
+import com.example.myticket.Retrofit.APIUtils;
+import com.example.myticket.Retrofit.DataClient;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -30,7 +28,7 @@ public class DangNhapActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
-        setContentView (R.layout.layout_dangnhap);
+        setContentView (R.layout.layout_thongtinve);
 
 
         anhxa();
@@ -44,38 +42,37 @@ public class DangNhapActivity extends AppCompatActivity {
             }
         });
 
-       btnDangNhapDN.setOnClickListener (new View.OnClickListener ( ) {
-           @Override
-           public void onClick(View v) {
-               sdt = edtSDTDN.getText ().toString ();
-               matkhau = edtMatKhauDN.getText ().toString ();
-               if (sdt.length () >0 && matkhau.length () >0){
-                    DataClient dataClient =APIUtils.getData ();
-                    Call<List<Nguoidung>>  callback = dataClient.Logindata (sdt, matkhau);
+        btnDangNhapDN.setOnClickListener (new View.OnClickListener ( ) {
+            @Override
+            public void onClick(View v) {
+                sdt = edtSDTDN.getText().toString ();
+                matkhau = edtMatKhauDN.getText().toString ();
+                if (sdt.length () > 0 && matkhau.length () > 0){
+                    DataClient dataClient = APIUtils.getData ();
+                    Call<List<Nguoidung>> callback = dataClient.Logindata (sdt, matkhau);
                     callback.enqueue (new Callback<List<Nguoidung>> ( ) {
                         @Override
                         public void onResponse(Call<List<Nguoidung>> call, Response<List<Nguoidung>> response) {
                             ArrayList<Nguoidung> mangnguoidung = (ArrayList<Nguoidung>) response.body ();
-                            if (mangnguoidung.size () >0){
-                                Intent intent = new Intent (DangNhapActivity.this, TrangChuActivity.class);
-                                intent.putExtra ("mangnguoidung", mangnguoidung);
-                                startActivity (intent);
-                                Toast.makeText (DangNhapActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show ( );
+                            if(mangnguoidung.size () >0){
+
+                                Log.d ("BBB",mangnguoidung.get (0).getMatkhau ());
+                                Log.d ("BBB",mangnguoidung.get (0).getSdt ());
                             }
+
                         }
 
                         @Override
                         public void onFailure(Call<List<Nguoidung>> call, Throwable t) {
-
+                            Toast.makeText (DangNhapActivity.this, " không có tài khoan này", Toast.LENGTH_SHORT).show ( );
                         }
                     });
 
-               } else {
-                   Toast.makeText (DangNhapActivity.this, "Điền đầy đủ thông tin", Toast.LENGTH_SHORT).show ( );
-               }
-
-           }
-       });
+                } else {
+                    Toast.makeText (DangNhapActivity.this, "Nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show ( );
+                }
+            }
+        });
     }
 
     private void anhxa() {

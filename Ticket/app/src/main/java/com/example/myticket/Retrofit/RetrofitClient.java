@@ -1,4 +1,4 @@
-package com.example.myticket.Server;
+package com.example.myticket.Retrofit;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

@@ -5,5 +5,5 @@
 	$databasename = "mycao";
 
 	$con = mysqli_connect ($hostname, $username, $password , $databasename);
-	
+
 ?>

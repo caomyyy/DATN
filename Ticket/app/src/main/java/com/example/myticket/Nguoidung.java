@@ -8,7 +8,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class Nguoidung implements Parcelable {
 
-    @SerializedName("ID")
+    @SerializedName("id")
     @Expose
     private String iD;
     @SerializedName("tennd")
