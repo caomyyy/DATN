@@ -22,8 +22,8 @@
 
     <LinearLayout
         android:id="@+id/KhungVe"
-        android:layout_width="352dp"
-        android:layout_height="570dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
@@ -66,5 +66,17 @@
             android:text="Ghế số : 2"/>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btnDangKyDN"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="72dp"
+        android:backgroundTint="@color/colorbtn"
+        android:text="Hủy vé"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/KhungVe" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

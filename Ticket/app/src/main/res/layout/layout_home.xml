@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="236dp"
+        app:srcCompat="@drawable/background_header" />
+
+    <Button
+
+        android:id="@+id/btnTrangChuHome"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:backgroundTint="@color/colorbtn"
+        android:drawableLeft="@drawable/icon_home"
+        android:text="   Trang chủ"
+        android:textAlignment="textStart" />
+
+    <Button
+
+    android:id="@+id/btnDatveHome"
+    android:drawableLeft="@drawable/icon_search"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+        android:backgroundTint="@color/colorWhite"
+        android:textColor="@color/design_default_color_on_secondary"
+    android:text="   Đặt vé"
+    android:textAlignment="textStart"
+    />
+    <Button
+
+        android:id="@+id/btntaikhoanHome"
+        android:drawableLeft="@drawable/icon_user"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:backgroundTint="@color/colorWhite"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:text="   Tài khoản"
+        android:textAlignment="textStart"
+        />
+    <Button
+
+        android:id="@+id/btnVeHome"
+        android:drawableLeft="@drawable/icon_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:backgroundTint="@color/colorWhite"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:text="   Xem vé"
+        android:textAlignment="textStart"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/txtchonxe"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_above="@+id/KhungVe"
+        android:layout_marginTop="50dp"
+        android:text="Chọn Xe"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="180dp" />
+
+    <LinearLayout
+        android:id="@+id/khungThongTinXe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="25dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtchonxe"
+        tools:ignore="ExtraText">
+
+        ///////////////xe1
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Biển số xe :18B1-1234 "
+                android:textSize="@dimen/size20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Điểm đón : Bến xe Giáp Bát "
+                android:textSize="@dimen/size20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Điểm đón : Bến xe Nam Trực "
+                android:textSize="@dimen/size20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thời gian : 2020-06-20 00:09:00"
+                android:textSize="@dimen/size20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đánh giá : 4.5"
+                android:textSize="@dimen/size20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        /////////////xe2
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="Biển số xe :18B1-1234 "
+                android:textSize="@dimen/size20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Điểm đón : Bến xe Giáp Bát "
+                android:textSize="@dimen/size20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Điểm đón : Bến xe Nam Trực "
+                android:textSize="@dimen/size20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Thời gian : 2020-06-20 00:09:00"
+                android:textSize="@dimen/size20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đánh giá : 4.3"
+                android:textSize="@dimen/size20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/size15dp"
+        app:layout_constraintTop_toBottomOf="@+id/khungThongTinXe"
+        tools:layout_editor_absoluteX="69dp">
+
+        <Button
+            android:id="@+id/btntrolai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size15dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorbtn"
+            android:text="Trở lại" />
+
+        <Button
+            android:id="@+id/btntieptuc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size15dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/colorbtn"
+            android:text="Tiếp theo" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,11 +16,7 @@
 
         </activity>
         <activity android:name=".DangNhapActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <activity android:name=".ChonGheActivity">
@@ -30,7 +26,11 @@
 
         </activity>
         <activity android:name=".TrangChuActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".TheoDoi">
 
@@ -38,10 +38,16 @@
         <activity android:name=".ThongTinVeActivity">
 
         </activity>
+        <activity android:name="ChonXeActivity">
+
+        </activity>
         <activity android:name=".ThayDoiTTActivity">
 
         </activity>
         <activity android:name=".QuanLyXeActivity">
+
+    </activity>
+        <activity android:name=".XemTTTKActivity">
 
         </activity>
     </application>

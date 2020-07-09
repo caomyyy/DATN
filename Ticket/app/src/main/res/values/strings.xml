@@ -15,7 +15,7 @@
     <string name="chieudi">Nam Định - Hà Nội</string>
     <string name="chieuve">Hà Nội -  Nam Định</string>
     <string name="diemdung"> Điểm dừng</string>
-    <string name="chonngay">Chọn ngày đi</string>
+    <string name="chonngay">Chọn ngày đi DD/MM/YYYY</string>
     <string name="ok">OK</string>
     <string name="thoat">Thoát</string>
     <string name="chonghe">Chọn Ghế Ngối</string>

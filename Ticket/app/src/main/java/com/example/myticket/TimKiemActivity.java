@@ -11,21 +11,22 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 public class TimKiemActivity extends AppCompatActivity {
 
-    Button btnOK, btnThoat;
+    Button btnok, btnThoat;
     RadioGroup rdChieuDi;
     RadioButton rbdi, rbve;
-    EditText edtNgay,edtGio;
-    String diemdon, diemdung;
+    EditText edtNgay ;
+    TextView txtGio;
+    TimePicker timePicker;
     private  Spinner spnCategory, spnCategory2;
 
     @Override
@@ -36,13 +37,13 @@ public class TimKiemActivity extends AppCompatActivity {
 
         spnCategory = (Spinner) findViewById (R.id.spnCategory);
         spnCategory2 = (Spinner)findViewById (R.id.spnCategory2) ;
-        btnOK = (Button) findViewById (R.id.btnOK);
+        btnok = (Button) findViewById (R.id.btnok);
         edtNgay = (EditText) findViewById (R.id.edtNgay);
-        edtGio = (EditText) findViewById (R.id.edtGio);
         btnThoat = (Button) findViewById (R.id.btnThoat);
         rdChieuDi = (RadioGroup)findViewById (R.id.rgChieuDi);
         rbdi = (RadioButton) findViewById (R.id.rbdi);
         rbve = (RadioButton) findViewById (R.id.rbve);
+        timePicker = (TimePicker) findViewById (R.id.timePicker);
 
 
 
@@ -85,20 +86,25 @@ public class TimKiemActivity extends AppCompatActivity {
 
             }
         });
-        //////Chọn ngày đi
 
 
-        /////////chọn Giờ
-        ///////Xác nhận
-
-
-        btnThoat.setOnClickListener (new View.OnClickListener ( ) {
+          btnThoat.setOnClickListener (new View.OnClickListener ( ) {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent (TimKiemActivity.this,TrangChuActivity.class);
                 startActivity (intent);
             }
         });
+       btnok.setOnClickListener (new View.OnClickListener ( ) {
+           @Override
+           public void onClick(View v) {
+               Intent i = new Intent (TimKiemActivity.this, ChonXeActivity.class);
+               startActivity (i);
+           }
+       });
     }
+
+
+
 
 }

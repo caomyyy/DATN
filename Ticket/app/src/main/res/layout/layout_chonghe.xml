@@ -194,22 +194,22 @@
         tools:layout_editor_absoluteX="69dp">
 
         <Button
-            android:id="@+id/btnOK"
+            android:id="@+id/btntrolaighe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:backgroundTint="@color/colorbtn"
-            android:text="OK" />
+            android:text="Đặt vé" />
 
         <Button
-            android:id="@+id/btnThoat"
+            android:id="@+id/btndatveghe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:backgroundTint="@color/colorbtn"
-            android:text="Thoát" />
+            android:text="Trở lại" />
     </LinearLayout>
 
 

@@ -1,14 +1,10 @@
 package com.example.myticket;
-
-import android.os.Parcel;
-import android.os.Parcelable;
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Nguoidung implements Parcelable {
+public class Nguoidung {
 
-    @SerializedName("id")
+    @SerializedName("ID")
     @Expose
     private String iD;
     @SerializedName("tennd")
@@ -29,28 +25,6 @@ public class Nguoidung implements Parcelable {
     @SerializedName("matkhau")
     @Expose
     private String matkhau;
-
-    protected Nguoidung(Parcel in) {
-        iD = in.readString ( );
-        tennd = in.readString ( );
-        sdt = in.readString ( );
-        cmt = in.readString ( );
-        ngaysinh = in.readString ( );
-        gioitinh = in.readString ( );
-        matkhau = in.readString ( );
-    }
-
-    public static final Creator<Nguoidung> CREATOR = new Creator<Nguoidung> ( ) {
-        @Override
-        public Nguoidung createFromParcel(Parcel in) {
-            return new Nguoidung (in);
-        }
-
-        @Override
-        public Nguoidung[] newArray(int size) {
-            return new Nguoidung[size];
-        }
-    };
 
     public String getID() {
         return iD;
@@ -108,19 +82,4 @@ public class Nguoidung implements Parcelable {
         this.matkhau = matkhau;
     }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString (iD);
-        dest.writeString (tennd);
-        dest.writeString (sdt);
-        dest.writeString (cmt);
-        dest.writeString (ngaysinh);
-        dest.writeString (gioitinh);
-        dest.writeString (matkhau);
-    }
 }

@@ -8,27 +8,30 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ChonGheActivity extends AppCompatActivity {
-    Button btndatve , btntrolai;
+public class XemTTTKActivity extends AppCompatActivity {
+    Button btnTrangChu , btnTDTT;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate (savedInstanceState);
-        setContentView (R.layout.layout_chonghe);
+        setContentView (R.layout.layout_taikhoan);
 
-        btndatve = (Button) findViewById (R.id.btndatveghe);
-        btntrolai = (Button) findViewById (R.id.btntrolaighe);
-        btndatve.setOnClickListener (new View.OnClickListener ( ) {
+        btnTrangChu = (Button) findViewById (R.id.btnTrangChu);
+        btnTDTT = (Button) findViewById (R.id.btnThayDoiTT);
+
+
+
+        btnTrangChu.setOnClickListener (new View.OnClickListener ( ) {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent (ChonGheActivity.this, TrangChuActivity.class);
+                Intent i = new Intent (XemTTTKActivity.this, TrangChuActivity.class);
                 startActivity (i);
             }
         });
-        btntrolai.setOnClickListener (new View.OnClickListener ( ) {
+        btnTDTT.setOnClickListener (new View.OnClickListener ( ) {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent (ChonGheActivity.this, ChonGheActivity.class);
+                Intent i = new Intent (XemTTTKActivity.this, ThayDoiTTActivity.class);
                 startActivity (i);
             }
         });

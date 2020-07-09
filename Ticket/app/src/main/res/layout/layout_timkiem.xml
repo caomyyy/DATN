@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent">
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:ignore="ExtraText">
@@ -93,24 +93,33 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/edtGio"
+                    android:id="@+id/edtNgay"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawableLeft="@drawable/icon_date"
                     android:drawablePadding="15dp"
                     android:hint="@string/chonngay"
+                    android:inputType="date"
                     android:padding="@dimen/size15dp"
+
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/edtNgay"
-                    android:layout_width="match_parent"
+<!--                <EditText-->
+<!--                    android:id="@+id/edtGio"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:drawableLeft="@drawable/icon_time"-->
+<!--                    android:drawablePadding="15dp"-->
+<!--                    android:hint="@string/chongio"-->
+<!--                    android:padding="@dimen/size15dp"-->
+<!--                    android:textStyle="bold" />-->
+
+                <TimePicker
+                    android:id="@+id/timePicker"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableLeft="@drawable/icon_time"
-                    android:drawablePadding="15dp"
-                    android:hint="@string/chongio"
-                    android:padding="@dimen/size15dp"
-                    android:textStyle="bold" />
+                    android:timePickerMode="clock" />
+
             </LinearLayout>
 
 
@@ -134,7 +143,7 @@
                 android:layout_margin="@dimen/size15dp"
                 android:layout_weight="1"
                 android:backgroundTint="@color/colorbtn"
-                android:text="@string/ok" />
+                android:text="Tiếp theo" />
 
             <Button
                 android:id="@+id/btnThoat"
@@ -148,3 +157,4 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

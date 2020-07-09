@@ -53,6 +53,7 @@ public class DangNhapActivity extends AppCompatActivity {
                     callback.enqueue (new Callback<List<Nguoidung>> ( ) {
                         @Override
                         public void onResponse(Call<List<Nguoidung>> call, Response<List<Nguoidung>> response) {
+
                             ArrayList<Nguoidung> mangnguoidung = (ArrayList<Nguoidung>) response.body ();
                             if(mangnguoidung.size () >0){
 
